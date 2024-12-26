@@ -1,0 +1,177 @@
+/* Сброс стандартных стилей браузера */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  background-color: rgba(38,39,48,1); /* Тёмный фон страницы */
+  color: #000; /* Основной цвет текста */
+  line-height: 1.5;
+}
+
+/* Основной контейнер страницы */
+.v1_2 {
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(38,39,48,1);
+  overflow: hidden;
+}
+
+/* Шапка */
+.v6_2 {
+  width: 100%;
+  height: 80px; /* Высота шапки */
+  background: #F0F0D1; /* Цвет фона */
+  display: flex;
+  align-items: center; /* Центрирование по вертикали */
+  justify-content: space-between; /* Элементы по краям */
+  border-bottom: 2px solid #2A2A2A; /* Полоса снизу */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+/* Логотип (текст 'clothes') */
+.v6_21 {
+  font-size: 36px; /* Размер шрифта */
+  font-weight: normal;
+  color: #000; /* Чёрный цвет */
+  text-decoration: none;
+  margin-left: 240px; /* Отступ слева */
+}
+
+/* Иконка профиля */
+.v6_22 {
+  width: 80px;
+  height: 80px;
+  background: none; /* Убираем фон */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 240px; /* Отступ справа */
+}
+
+.v6_23 {
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/profile-icon.svg'); /* Путь к иконке */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; /* Масштабируем иконку */
+  cursor: pointer;
+}
+
+
+
+/* Контейнер с товарами */
+.products-container {
+  width: calc(100% - 80px); /* Учитываем отступы */
+  max-width: 1200px; /* Ограничиваем ширину */
+  margin: 0 auto; /* Выравнивание по центру */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Расстояние между карточками */
+  padding: 20px 0;
+  justify-content: center;
+}
+
+/* Карточка товара */
+.product {
+  width: 240px;
+  background: rgba(255,255,255,1);
+  color: rgba(0,0,0,1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для карточки */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Анимация при наведении */
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Изображение товара */
+.product-image {
+  width: 100%;
+  height: 160px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Информация о товаре */
+.product-info {
+  text-align: center;
+  padding: 10px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0; /* Убираем отступы под названием */
+  display: block; /* Гарантируем, что название занимает всю ширину */
+  word-wrap: break-word; /* Перенос слов при длинном тексте */
+}
+
+.product-size {
+  font-size: 14px;
+  color: rgba(100, 100, 100, 1); /* Приглушённый цвет */
+  display: block; /* Размещаем размер на новой строке */
+  margin-top: 8px; /* Отступ сверху, чтобы отделить размер от названия */
+}
+
+
+
+.product-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Обрезка текста в одну строку */
+  white-space: nowrap;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #27ae60; /* Зелёный цвет для цены */
+}
+
+/* Стили для зелёного плюсика */
+.add-product-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #27ae60; /* Зелёный фон */
+  border-radius: 50%; /* Круглая форма */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+
+.add-product-icon:hover {
+  transform: scale(1.1); /* Увеличение кнопки */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Усиленная тень при наведении */
+}
+
+.add-product-icon img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1); /* Белая иконка */
+}

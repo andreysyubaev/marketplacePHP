@@ -1,0 +1,79 @@
+/* Подключение шрифта */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #262730;
+  margin: 0;
+  padding: 0;
+}
+
+/* Основной контейнер */
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #eff0d1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Заголовок */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Форма */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Метки (label) */
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Поля ввода */
+input, textarea, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Текстовые области */
+textarea {
+  resize: vertical;
+}
+
+/* Поля загрузки файлов */
+input[type="file"] {
+  padding: 5px;
+}
+
+/* Кнопка */
+button {
+  background-color: #262730;
+  color: #eff0d1;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: black;
+}
+
+/* Сообщения об ошибках и успехах */
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.success {
+  color: green;
+  font-size: 14px;
+}
